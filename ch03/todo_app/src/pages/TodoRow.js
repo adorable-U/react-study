@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const TodoRow = (props) => {
+    const [isEditable, setEditable] = useState(false);
     return (
         <li className="card">
             <header className="card-header">
@@ -8,10 +9,10 @@ const TodoRow = (props) => {
             </header>
             <ul className="card-controls">
                 <li>
-                    <button className="card-control">변경</button>
+                    <button className="card-control" onClick={() => {setEditable(true)}}>변경</button>
                 </li>
                 <li>
-                    <button className="card-control">삭제</button>
+                    <button className="card-control" onClick={() => {props.deleteTodo(props.todo.id)}}>삭제</button>
                 </li>
             </ul>
         </li>

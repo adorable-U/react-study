@@ -79,3 +79,8 @@ main {
 .card-control:hover {
     text-decoration: underline;
 }
+
+.iconButton img {
+    display:inline-block;
+    width: 15px;
+}
